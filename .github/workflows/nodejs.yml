@@ -28,7 +28,7 @@ jobs:
       run: |
         curl ifconfig.me
         ifconfig
-        hostname-i
+        hostname -I
         ip addr
         ip a
     - name: start
