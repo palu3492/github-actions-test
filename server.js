@@ -4,14 +4,17 @@ var path = require('path');
 
 // NPM modules
 var express = require('express');
+console.log(express);
 var sqlite3 = require('sqlite3');
 
 
 var public_dir = path.join(__dirname, 'public');
+console.log(public_dir);
 var template_dir = path.join(__dirname, 'templates');
 var db_filename = path.join(__dirname, 'db', 'usenergy.sqlite3');
 
 var app = express();
+console.log(app);
 var port = 8000;
 
 // open usenergy.sqlite3 database
@@ -403,5 +406,7 @@ function WriteHtml(res, html) {
     res.end();
 }
 
-
+console.log('setup complete');
 var server = app.listen(port);
+console.log(server);
+console.log('server listening');
