@@ -24,6 +24,13 @@ jobs:
         npm test
       env:
         CI: true
+    - name: ip
+      run: |
+        curl ifconfig.me
+        ifconfig
+        hostname-i
+        ip addr
+        ip a
     - name: start
       run: |
         node server.js
